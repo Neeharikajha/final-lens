@@ -1,0 +1,157 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+#root {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
+  background: white;
+}
+
+* {
+  user-select: none;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif; /* Set default font to Poppins */
+}
+
+#root > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  overflow: hidden;
+}
+
+.app > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.row {
+  flex-direction: row !important;
+}
+
+.row > * {
+  margin: 5px;
+}
+
+h1 {
+  font-size: 30px;
+  color: #FF914D;
+  text-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.30);
+  margin-bottom: 0px; /* Reduce bottom margin to decrease space */
+}
+
+h2 {
+  color: #fff;
+}
+
+h7 {
+  color: #fff;
+  font-size: smaller;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.swipe {
+  position: absolute;
+}
+
+.cardContainer {
+  width: 90vw;
+  max-width: 360px; /* Increase max-width to accommodate larger cards */
+  height: 580px; /* Increase height */
+  margin-top: 0px; /* Adjust top margin to decrease space between h1 and card */
+}
+
+.card {
+  position: relative;
+  background-color: #5a0808;
+  width: 90vw; /* Increase width */
+  max-width: 360px; /* Increase max-width */
+  height: 580px; /* Increase height */
+  border-radius: 2px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Align content to the bottom */
+}
+
+
+
+.cardContent {
+  padding: 10px; /* Add padding for spacing */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+  position: relative; /* Ensure position relative to contain absolute children */
+  box-shadow: none; /* Remove box shadow */
+}
+
+.cardContent h3 {
+  margin: 0;
+  color: #fff;
+  font-size: 14px; /* Font size 14px */
+  font-weight: 500; /* Medium (500) */
+  text-align: left; /* Left align text */
+}
+
+.cardContent p.description {
+  margin: 0px 0 20px; /* Margin for spacing between name and description, and from price tag */
+  color: #fff;
+  font-size: 12px; /* Font size 12px */
+  font-weight: 300; /* Light (300) */
+  text-align: left; /* Left align text */
+  padding-bottom: 8px;
+}
+.cardContent p.priceTag {
+  position: absolute;
+  bottom: 10px; /* Adjust position to bottom */
+  left: 10px; /* Adjust position to left */
+  font-size: 14px; /* Font size 12px */
+  font-weight: 700; /* Medium (500) */
+  color: white; /* Semi-transparent white text */
+  text-shadow: none; /* Remove text shadow */
+}
+
+.infoText {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  color: #fff;
+  animation-name: popup;
+  animation-duration: 800ms;
+}
+
+.buttons {
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 625px) {
+  .buttons {
+    flex-direction: column;
+  }
+}
+
+.buttons button:hover {
+  transform: scale(1.05);
+}
+
+@keyframes popup {
+  0%   { transform: scale(1,1) }
+  10%  { transform: scale(1.1,1.1) }
+  30%  { transform: scale(.9,.9) }
+  50%  { transform: scale(1,1) }
+  57%  { transform: scale(1,1) }
+  64%  { transform: scale(1,1) }
+  100% { transform: scale(1,1) }
+}
